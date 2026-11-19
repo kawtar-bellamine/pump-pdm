@@ -1,0 +1,1182 @@
+{
+ "experiments": 34,
+ "test_seconds": 23801,
+ "anomalous_share": 0.537,
+ "reproduction": {
+  "T-squared": {
+   "skab_metric": {
+    "f1": 0.66,
+    "far": 19.21,
+    "mar": 42.6
+   },
+   "our_metric": {
+    "f1": 0.66,
+    "far": 19.21,
+    "mar": 42.6,
+    "tp": 7331,
+    "fp": 2119,
+    "fn": 5440,
+    "tn": 8911
+   }
+  },
+  "T-squared+Q (PCA-based)": {
+   "skab_metric": {
+    "f1": 0.76,
+    "far": 26.62,
+    "mar": 24.92
+   },
+   "our_metric": {
+    "f1": 0.758,
+    "far": 26.62,
+    "mar": 24.92,
+    "tp": 9589,
+    "fp": 2936,
+    "fn": 3182,
+    "tn": 8094
+   }
+  }
+ },
+ "a_priori": {
+  "Hotelling T\u00b2": {
+   "f1": 0.751,
+   "far": 39.19,
+   "mar": 19.54,
+   "tp": 10276,
+   "fp": 4323,
+   "fn": 2495,
+   "tn": 6707
+  },
+  "PCA T\u00b2 + Q": {
+   "f1": 0.748,
+   "far": 38.24,
+   "mar": 20.53,
+   "tp": 10149,
+   "fp": 4218,
+   "fn": 2622,
+   "tn": 6812
+  },
+  "Isolation forest": {
+   "f1": 0.357,
+   "far": 6.08,
+   "mar": 77.16,
+   "tp": 2917,
+   "fp": 671,
+   "fn": 9854,
+   "tn": 10359
+  },
+  "Virtual sensors (cross-sensor residuals)": {
+   "f1": 0.747,
+   "far": 42.73,
+   "mar": 18.46,
+   "tp": 10413,
+   "fp": 4713,
+   "fn": 2358,
+   "tn": 6317
+  }
+ },
+ "leave_one_group_out": {
+  "Hotelling T\u00b2": {
+   "binary": {
+    "f1": 0.764,
+    "far": 46.91,
+    "mar": 13.08,
+    "tp": 11100,
+    "fp": 5174,
+    "fn": 1671,
+    "tn": 5856
+   },
+   "settings": {
+    "valve1": {
+     "k": 0.75,
+     "w": 5
+    },
+    "valve2": {
+     "k": 0.75,
+     "w": 60
+    },
+    "other": {
+     "k": 0.75,
+     "w": 60
+    }
+   },
+   "events": {
+    "faults": 34,
+    "detected": 33,
+    "median_delay_s": 11.0,
+    "p90_delay_s": 65.4,
+    "false_alarms_per_hour_normal": 21.54,
+    "by_fault": {
+     "cavitation": {
+      "experiments": 2,
+      "faults": 2,
+      "detected": 1,
+      "median_delay_s": 16.0
+     },
+     "fluid leak/addition": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 4,
+      "median_delay_s": 45.0
+     },
+     "inlet valve closed": {
+      "experiments": 16,
+      "faults": 16,
+      "detected": 16,
+      "median_delay_s": 7.0
+     },
+     "outlet valve closed": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 4,
+      "median_delay_s": 63.0
+     },
+     "rotor imbalance": {
+      "experiments": 5,
+      "faults": 5,
+      "detected": 5,
+      "median_delay_s": 1.0
+     },
+     "water level": {
+      "experiments": 3,
+      "faults": 3,
+      "detected": 3,
+      "median_delay_s": 48.0
+     }
+    }
+   }
+  },
+  "PCA T\u00b2 + Q": {
+   "binary": {
+    "f1": 0.767,
+    "far": 45.3,
+    "mar": 13.37,
+    "tp": 11064,
+    "fp": 4997,
+    "fn": 1707,
+    "tn": 6033
+   },
+   "settings": {
+    "valve1": {
+     "k": 0.75,
+     "w": 5
+    },
+    "valve2": {
+     "k": 0.75,
+     "w": 60
+    },
+    "other": {
+     "k": 0.75,
+     "w": 60
+    }
+   },
+   "events": {
+    "faults": 34,
+    "detected": 33,
+    "median_delay_s": 15.0,
+    "p90_delay_s": 67.0,
+    "false_alarms_per_hour_normal": 17.62,
+    "by_fault": {
+     "cavitation": {
+      "experiments": 2,
+      "faults": 2,
+      "detected": 1,
+      "median_delay_s": 16.0
+     },
+     "fluid leak/addition": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 4,
+      "median_delay_s": 45.0
+     },
+     "inlet valve closed": {
+      "experiments": 16,
+      "faults": 16,
+      "detected": 16,
+      "median_delay_s": 10.0
+     },
+     "outlet valve closed": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 4,
+      "median_delay_s": 64.0
+     },
+     "rotor imbalance": {
+      "experiments": 5,
+      "faults": 5,
+      "detected": 5,
+      "median_delay_s": 1.0
+     },
+     "water level": {
+      "experiments": 3,
+      "faults": 3,
+      "detected": 3,
+      "median_delay_s": 44.0
+     }
+    }
+   }
+  },
+  "Isolation forest": {
+   "binary": {
+    "f1": 0.715,
+    "far": 87.34,
+    "mar": 2.4,
+    "tp": 12465,
+    "fp": 9634,
+    "fn": 306,
+    "tn": 1396
+   },
+   "settings": {
+    "valve1": {
+     "k": 0.75,
+     "w": 1
+    },
+    "valve2": {
+     "k": 0.75,
+     "w": 1
+    },
+    "other": {
+     "k": 0.75,
+     "w": 1
+    }
+   },
+   "events": {
+    "faults": 34,
+    "detected": 34,
+    "median_delay_s": 0.0,
+    "p90_delay_s": 1.0,
+    "false_alarms_per_hour_normal": 278.4,
+    "by_fault": {
+     "cavitation": {
+      "experiments": 2,
+      "faults": 2,
+      "detected": 2,
+      "median_delay_s": 3.5
+     },
+     "fluid leak/addition": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 4,
+      "median_delay_s": 0.0
+     },
+     "inlet valve closed": {
+      "experiments": 16,
+      "faults": 16,
+      "detected": 16,
+      "median_delay_s": 0.0
+     },
+     "outlet valve closed": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 4,
+      "median_delay_s": 0.0
+     },
+     "rotor imbalance": {
+      "experiments": 5,
+      "faults": 5,
+      "detected": 5,
+      "median_delay_s": 0.0
+     },
+     "water level": {
+      "experiments": 3,
+      "faults": 3,
+      "detected": 3,
+      "median_delay_s": 0.0
+     }
+    }
+   }
+  },
+  "Virtual sensors (cross-sensor residuals)": {
+   "binary": {
+    "f1": 0.766,
+    "far": 50.09,
+    "mar": 11.03,
+    "tp": 11362,
+    "fp": 5525,
+    "fn": 1409,
+    "tn": 5505
+   },
+   "settings": {
+    "valve1": {
+     "k": 0.75,
+     "w": 5
+    },
+    "valve2": {
+     "k": 0.75,
+     "w": 15
+    },
+    "other": {
+     "k": 0.75,
+     "w": 15
+    }
+   },
+   "events": {
+    "faults": 34,
+    "detected": 34,
+    "median_delay_s": 4.5,
+    "p90_delay_s": 50.5,
+    "false_alarms_per_hour_normal": 27.74,
+    "by_fault": {
+     "cavitation": {
+      "experiments": 2,
+      "faults": 2,
+      "detected": 2,
+      "median_delay_s": 9.5
+     },
+     "fluid leak/addition": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 4,
+      "median_delay_s": 28.0
+     },
+     "inlet valve closed": {
+      "experiments": 16,
+      "faults": 16,
+      "detected": 16,
+      "median_delay_s": 2.5
+     },
+     "outlet valve closed": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 4,
+      "median_delay_s": 15.5
+     },
+     "rotor imbalance": {
+      "experiments": 5,
+      "faults": 5,
+      "detected": 5,
+      "median_delay_s": 1.0
+     },
+     "water level": {
+      "experiments": 3,
+      "faults": 3,
+      "detected": 3,
+      "median_delay_s": 42.0
+     }
+    }
+   }
+  }
+ },
+ "leave_one_group_out_far10": {
+  "Hotelling T\u00b2": {
+   "binary": {
+    "f1": 0.496,
+    "far": 8.77,
+    "mar": 64.56,
+    "tp": 4526,
+    "fp": 967,
+    "fn": 8245,
+    "tn": 10063
+   },
+   "settings": {
+    "valve1": {
+     "k": 5,
+     "w": 1
+    },
+    "valve2": {
+     "k": 5,
+     "w": 5
+    },
+    "other": {
+     "k": 5,
+     "w": 60
+    }
+   },
+   "events": {
+    "faults": 34,
+    "detected": 18,
+    "median_delay_s": 34.0,
+    "p90_delay_s": 84.20000000000002,
+    "false_alarms_per_hour_normal": 10.12,
+    "by_fault": {
+     "cavitation": {
+      "experiments": 2,
+      "faults": 2,
+      "detected": 1,
+      "median_delay_s": 20.0
+     },
+     "fluid leak/addition": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 1,
+      "median_delay_s": 69.0
+     },
+     "inlet valve closed": {
+      "experiments": 16,
+      "faults": 16,
+      "detected": 8,
+      "median_delay_s": 49.0
+     },
+     "outlet valve closed": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 1,
+      "median_delay_s": 285.0
+     },
+     "rotor imbalance": {
+      "experiments": 5,
+      "faults": 5,
+      "detected": 5,
+      "median_delay_s": 4.0
+     },
+     "water level": {
+      "experiments": 3,
+      "faults": 3,
+      "detected": 2,
+      "median_delay_s": 76.5
+     }
+    }
+   }
+  },
+  "PCA T\u00b2 + Q": {
+   "binary": {
+    "f1": 0.514,
+    "far": 11.21,
+    "mar": 62.09,
+    "tp": 4841,
+    "fp": 1237,
+    "fn": 7930,
+    "tn": 9793
+   },
+   "settings": {
+    "valve1": {
+     "k": 5,
+     "w": 1
+    },
+    "valve2": {
+     "k": 5,
+     "w": 5
+    },
+    "other": {
+     "k": 3,
+     "w": 60
+    }
+   },
+   "events": {
+    "faults": 34,
+    "detected": 18,
+    "median_delay_s": 23.0,
+    "p90_delay_s": 81.60000000000002,
+    "false_alarms_per_hour_normal": 10.44,
+    "by_fault": {
+     "cavitation": {
+      "experiments": 2,
+      "faults": 2,
+      "detected": 1,
+      "median_delay_s": 19.0
+     },
+     "fluid leak/addition": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 1,
+      "median_delay_s": 27.0
+     },
+     "inlet valve closed": {
+      "experiments": 16,
+      "faults": 16,
+      "detected": 8,
+      "median_delay_s": 52.0
+     },
+     "outlet valve closed": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 1,
+      "median_delay_s": 288.0
+     },
+     "rotor imbalance": {
+      "experiments": 5,
+      "faults": 5,
+      "detected": 5,
+      "median_delay_s": 3.0
+     },
+     "water level": {
+      "experiments": 3,
+      "faults": 3,
+      "detected": 2,
+      "median_delay_s": 74.0
+     }
+    }
+   }
+  },
+  "Isolation forest": {
+   "binary": {
+    "f1": 0.357,
+    "far": 6.08,
+    "mar": 77.16,
+    "tp": 2917,
+    "fp": 671,
+    "fn": 9854,
+    "tn": 10359
+   },
+   "settings": {
+    "valve1": {
+     "k": 1,
+     "w": 1
+    },
+    "valve2": {
+     "k": 1,
+     "w": 1
+    },
+    "other": {
+     "k": 1,
+     "w": 1
+    }
+   },
+   "events": {
+    "faults": 34,
+    "detected": 34,
+    "median_delay_s": 13.0,
+    "p90_delay_s": 68.69999999999997,
+    "false_alarms_per_hour_normal": 172.98,
+    "by_fault": {
+     "cavitation": {
+      "experiments": 2,
+      "faults": 2,
+      "detected": 2,
+      "median_delay_s": 15.5
+     },
+     "fluid leak/addition": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 4,
+      "median_delay_s": 14.5
+     },
+     "inlet valve closed": {
+      "experiments": 16,
+      "faults": 16,
+      "detected": 16,
+      "median_delay_s": 21.0
+     },
+     "outlet valve closed": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 4,
+      "median_delay_s": 21.5
+     },
+     "rotor imbalance": {
+      "experiments": 5,
+      "faults": 5,
+      "detected": 5,
+      "median_delay_s": 5.0
+     },
+     "water level": {
+      "experiments": 3,
+      "faults": 3,
+      "detected": 3,
+      "median_delay_s": 8.0
+     }
+    }
+   }
+  },
+  "Virtual sensors (cross-sensor residuals)": {
+   "binary": {
+    "f1": 0.465,
+    "far": 7.44,
+    "mar": 67.76,
+    "tp": 4118,
+    "fp": 821,
+    "fn": 8653,
+    "tn": 10209
+   },
+   "settings": {
+    "valve1": {
+     "k": 8,
+     "w": 5
+    },
+    "valve2": {
+     "k": 8,
+     "w": 1
+    },
+    "other": {
+     "k": 5,
+     "w": 30
+    }
+   },
+   "events": {
+    "faults": 34,
+    "detected": 16,
+    "median_delay_s": 19.0,
+    "p90_delay_s": 86.0,
+    "false_alarms_per_hour_normal": 2.61,
+    "by_fault": {
+     "cavitation": {
+      "experiments": 2,
+      "faults": 2,
+      "detected": 1,
+      "median_delay_s": 18.0
+     },
+     "fluid leak/addition": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 1,
+      "median_delay_s": 0.0
+     },
+     "inlet valve closed": {
+      "experiments": 16,
+      "faults": 16,
+      "detected": 6,
+      "median_delay_s": 45.0
+     },
+     "outlet valve closed": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 1,
+      "median_delay_s": 290.0
+     },
+     "rotor imbalance": {
+      "experiments": 5,
+      "faults": 5,
+      "detected": 5,
+      "median_delay_s": 4.0
+     },
+     "water level": {
+      "experiments": 3,
+      "faults": 3,
+      "detected": 2,
+      "median_delay_s": 71.0
+     }
+    }
+   }
+  }
+ },
+ "leave_one_group_out_events": {
+  "Hotelling T\u00b2": {
+   "binary": {
+    "f1": 0.582,
+    "far": 10.92,
+    "mar": 55.14,
+    "tp": 5729,
+    "fp": 1204,
+    "fn": 7042,
+    "tn": 9826
+   },
+   "settings": {
+    "valve1": {
+     "k": 3,
+     "w": 15
+    },
+    "valve2": {
+     "k": 3,
+     "w": 60
+    },
+    "other": {
+     "k": 5,
+     "w": 15
+    }
+   },
+   "events": {
+    "faults": 34,
+    "detected": 21,
+    "median_delay_s": 52.0,
+    "p90_delay_s": 105.0,
+    "false_alarms_per_hour_normal": 2.94,
+    "by_fault": {
+     "cavitation": {
+      "experiments": 2,
+      "faults": 2,
+      "detected": 1,
+      "median_delay_s": 17.0
+     },
+     "fluid leak/addition": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 1,
+      "median_delay_s": 48.0
+     },
+     "inlet valve closed": {
+      "experiments": 16,
+      "faults": 16,
+      "detected": 10,
+      "median_delay_s": 58.0
+     },
+     "outlet valve closed": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 2,
+      "median_delay_s": 197.5
+     },
+     "rotor imbalance": {
+      "experiments": 5,
+      "faults": 5,
+      "detected": 5,
+      "median_delay_s": 2.0
+     },
+     "water level": {
+      "experiments": 3,
+      "faults": 3,
+      "detected": 2,
+      "median_delay_s": 69.0
+     }
+    }
+   }
+  },
+  "PCA T\u00b2 + Q": {
+   "binary": {
+    "f1": 0.558,
+    "far": 13.23,
+    "mar": 56.87,
+    "tp": 5508,
+    "fp": 1459,
+    "fn": 7263,
+    "tn": 9571
+   },
+   "settings": {
+    "valve1": {
+     "k": 3,
+     "w": 30
+    },
+    "valve2": {
+     "k": 3,
+     "w": 60
+    },
+    "other": {
+     "k": 3,
+     "w": 60
+    }
+   },
+   "events": {
+    "faults": 34,
+    "detected": 19,
+    "median_delay_s": 27.0,
+    "p90_delay_s": 103.8,
+    "false_alarms_per_hour_normal": 2.61,
+    "by_fault": {
+     "cavitation": {
+      "experiments": 2,
+      "faults": 2,
+      "detected": 1,
+      "median_delay_s": 19.0
+     },
+     "fluid leak/addition": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 1,
+      "median_delay_s": 27.0
+     },
+     "inlet valve closed": {
+      "experiments": 16,
+      "faults": 16,
+      "detected": 8,
+      "median_delay_s": 57.0
+     },
+     "outlet valve closed": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 2,
+      "median_delay_s": 200.0
+     },
+     "rotor imbalance": {
+      "experiments": 5,
+      "faults": 5,
+      "detected": 5,
+      "median_delay_s": 3.0
+     },
+     "water level": {
+      "experiments": 3,
+      "faults": 3,
+      "detected": 2,
+      "median_delay_s": 74.0
+     }
+    }
+   }
+  },
+  "Isolation forest": {
+   "binary": {
+    "f1": 0.279,
+    "far": 1.19,
+    "mar": 83.61,
+    "tp": 2093,
+    "fp": 131,
+    "fn": 10678,
+    "tn": 10899
+   },
+   "settings": {
+    "valve1": {
+     "k": 1,
+     "w": 60
+    },
+    "valve2": {
+     "k": 1,
+     "w": 60
+    },
+    "other": {
+     "k": 1,
+     "w": 15
+    }
+   },
+   "events": {
+    "faults": 34,
+    "detected": 16,
+    "median_delay_s": 90.5,
+    "p90_delay_s": 250.5,
+    "false_alarms_per_hour_normal": 3.92,
+    "by_fault": {
+     "cavitation": {
+      "experiments": 2,
+      "faults": 2,
+      "detected": 1,
+      "median_delay_s": 71.0
+     },
+     "fluid leak/addition": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 2,
+      "median_delay_s": 72.5
+     },
+     "inlet valve closed": {
+      "experiments": 16,
+      "faults": 16,
+      "detected": 4,
+      "median_delay_s": 114.5
+     },
+     "outlet valve closed": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 2,
+      "median_delay_s": 117.0
+     },
+     "rotor imbalance": {
+      "experiments": 5,
+      "faults": 5,
+      "detected": 4,
+      "median_delay_s": 117.5
+     },
+     "water level": {
+      "experiments": 3,
+      "faults": 3,
+      "detected": 3,
+      "median_delay_s": 83.0
+     }
+    }
+   }
+  },
+  "Virtual sensors (cross-sensor residuals)": {
+   "binary": {
+    "f1": 0.616,
+    "far": 17.67,
+    "mar": 48.68,
+    "tp": 6554,
+    "fp": 1949,
+    "fn": 6217,
+    "tn": 9081
+   },
+   "settings": {
+    "valve1": {
+     "k": 3,
+     "w": 15
+    },
+    "valve2": {
+     "k": 2,
+     "w": 60
+    },
+    "other": {
+     "k": 5,
+     "w": 60
+    }
+   },
+   "events": {
+    "faults": 34,
+    "detected": 26,
+    "median_delay_s": 62.5,
+    "p90_delay_s": 236.5,
+    "false_alarms_per_hour_normal": 5.55,
+    "by_fault": {
+     "cavitation": {
+      "experiments": 2,
+      "faults": 2,
+      "detected": 1,
+      "median_delay_s": 19.0
+     },
+     "fluid leak/addition": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 1,
+      "median_delay_s": 0.0
+     },
+     "inlet valve closed": {
+      "experiments": 16,
+      "faults": 16,
+      "detected": 13,
+      "median_delay_s": 64.0
+     },
+     "outlet valve closed": {
+      "experiments": 4,
+      "faults": 4,
+      "detected": 4,
+      "median_delay_s": 157.5
+     },
+     "rotor imbalance": {
+      "experiments": 5,
+      "faults": 5,
+      "detected": 5,
+      "median_delay_s": 6.0
+     },
+     "water level": {
+      "experiments": 3,
+      "faults": 3,
+      "detected": 2,
+      "median_delay_s": 74.5
+     }
+    }
+   }
+  }
+ },
+ "always_alarm": {
+  "f1": 0.698,
+  "far": 100.0,
+  "mar": 0.0,
+  "tp": 12771,
+  "fp": 11030,
+  "fn": 0,
+  "tn": 0
+ },
+ "tuned_on_everything_optimistic": {
+  "Hotelling T\u00b2": {
+   "k": 0.75,
+   "w": 60,
+   "f1": 0.772,
+   "far": 45.6,
+   "mar": 12.32,
+   "tp": 11197,
+   "fp": 5030,
+   "fn": 1574,
+   "tn": 6000
+  },
+  "PCA T\u00b2 + Q": {
+   "k": 0.75,
+   "w": 5,
+   "f1": 0.773,
+   "far": 45.13,
+   "mar": 12.53,
+   "tp": 11171,
+   "fp": 4978,
+   "fn": 1600,
+   "tn": 6052
+  },
+  "Isolation forest": {
+   "k": 0.75,
+   "w": 1,
+   "f1": 0.715,
+   "far": 87.34,
+   "mar": 2.4,
+   "tp": 12465,
+   "fp": 9634,
+   "fn": 306,
+   "tn": 1396
+  },
+  "Virtual sensors (cross-sensor residuals)": {
+   "k": 0.75,
+   "w": 15,
+   "f1": 0.768,
+   "far": 50.05,
+   "mar": 10.67,
+   "tp": 11408,
+   "fp": 5520,
+   "fn": 1363,
+   "tn": 5510
+  }
+ },
+ "false_alarms_after_fault": {
+  "Hotelling T\u00b2": {
+   "within_3_min_after_fault": 964,
+   "elsewhere": 240,
+   "share_after_fault": 0.801
+  },
+  "PCA T\u00b2 + Q": {
+   "within_3_min_after_fault": 1225,
+   "elsewhere": 234,
+   "share_after_fault": 0.84
+  },
+  "Isolation forest": {
+   "within_3_min_after_fault": 113,
+   "elsewhere": 18,
+   "share_after_fault": 0.863
+  },
+  "Virtual sensors (cross-sensor residuals)": {
+   "within_3_min_after_fault": 1620,
+   "elsewhere": 329,
+   "share_after_fault": 0.831
+  }
+ },
+ "a_priori_events": {
+  "Hotelling T\u00b2": {
+   "faults": 34,
+   "detected": 34,
+   "median_delay_s": 3.5,
+   "p90_delay_s": 51.8,
+   "false_alarms_per_hour_normal": 147.52,
+   "by_fault": {
+    "cavitation": {
+     "experiments": 2,
+     "faults": 2,
+     "detected": 2,
+     "median_delay_s": 4.0
+    },
+    "fluid leak/addition": {
+     "experiments": 4,
+     "faults": 4,
+     "detected": 4,
+     "median_delay_s": 7.5
+    },
+    "inlet valve closed": {
+     "experiments": 16,
+     "faults": 16,
+     "detected": 16,
+     "median_delay_s": 4.0
+    },
+    "outlet valve closed": {
+     "experiments": 4,
+     "faults": 4,
+     "detected": 4,
+     "median_delay_s": 13.5
+    },
+    "rotor imbalance": {
+     "experiments": 5,
+     "faults": 5,
+     "detected": 5,
+     "median_delay_s": 1.0
+    },
+    "water level": {
+     "experiments": 3,
+     "faults": 3,
+     "detected": 3,
+     "median_delay_s": 8.0
+    }
+   }
+  },
+  "PCA T\u00b2 + Q": {
+   "faults": 34,
+   "detected": 34,
+   "median_delay_s": 5.0,
+   "p90_delay_s": 49.099999999999994,
+   "false_alarms_per_hour_normal": 134.8,
+   "by_fault": {
+    "cavitation": {
+     "experiments": 2,
+     "faults": 2,
+     "detected": 2,
+     "median_delay_s": 4.5
+    },
+    "fluid leak/addition": {
+     "experiments": 4,
+     "faults": 4,
+     "detected": 4,
+     "median_delay_s": 8.5
+    },
+    "inlet valve closed": {
+     "experiments": 16,
+     "faults": 16,
+     "detected": 16,
+     "median_delay_s": 15.5
+    },
+    "outlet valve closed": {
+     "experiments": 4,
+     "faults": 4,
+     "detected": 4,
+     "median_delay_s": 13.5
+    },
+    "rotor imbalance": {
+     "experiments": 5,
+     "faults": 5,
+     "detected": 5,
+     "median_delay_s": 1.0
+    },
+    "water level": {
+     "experiments": 3,
+     "faults": 3,
+     "detected": 3,
+     "median_delay_s": 6.0
+    }
+   }
+  },
+  "Isolation forest": {
+   "faults": 34,
+   "detected": 34,
+   "median_delay_s": 13.0,
+   "p90_delay_s": 68.69999999999997,
+   "false_alarms_per_hour_normal": 172.98,
+   "by_fault": {
+    "cavitation": {
+     "experiments": 2,
+     "faults": 2,
+     "detected": 2,
+     "median_delay_s": 15.5
+    },
+    "fluid leak/addition": {
+     "experiments": 4,
+     "faults": 4,
+     "detected": 4,
+     "median_delay_s": 14.5
+    },
+    "inlet valve closed": {
+     "experiments": 16,
+     "faults": 16,
+     "detected": 16,
+     "median_delay_s": 21.0
+    },
+    "outlet valve closed": {
+     "experiments": 4,
+     "faults": 4,
+     "detected": 4,
+     "median_delay_s": 21.5
+    },
+    "rotor imbalance": {
+     "experiments": 5,
+     "faults": 5,
+     "detected": 5,
+     "median_delay_s": 5.0
+    },
+    "water level": {
+     "experiments": 3,
+     "faults": 3,
+     "detected": 3,
+     "median_delay_s": 8.0
+    }
+   }
+  },
+  "Virtual sensors (cross-sensor residuals)": {
+   "faults": 34,
+   "detected": 34,
+   "median_delay_s": 3.0,
+   "p90_delay_s": 40.8,
+   "false_alarms_per_hour_normal": 177.55,
+   "by_fault": {
+    "cavitation": {
+     "experiments": 2,
+     "faults": 2,
+     "detected": 2,
+     "median_delay_s": 4.0
+    },
+    "fluid leak/addition": {
+     "experiments": 4,
+     "faults": 4,
+     "detected": 4,
+     "median_delay_s": 7.5
+    },
+    "inlet valve closed": {
+     "experiments": 16,
+     "faults": 16,
+     "detected": 16,
+     "median_delay_s": 2.0
+    },
+    "outlet valve closed": {
+     "experiments": 4,
+     "faults": 4,
+     "detected": 4,
+     "median_delay_s": 10.5
+    },
+    "rotor imbalance": {
+     "experiments": 5,
+     "faults": 5,
+     "detected": 5,
+     "median_delay_s": 1.0
+    },
+    "water level": {
+     "experiments": 3,
+     "faults": 3,
+     "detected": 3,
+     "median_delay_s": 38.0
+    }
+   }
+  }
+ }
+}
